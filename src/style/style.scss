@@ -1,0 +1,132 @@
+@import "~bootstrap/scss/bootstrap";
+@font-face {
+    font-family: 'BioRhyme';
+    src: url('../assets/fonts/BioRhyme-Regular.eot');
+    src: url('../assets/fonts/BioRhyme-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/BioRhyme-Regular.woff2') format('woff2'),
+        url('../assets/fonts/BioRhyme-Regular.woff') format('woff'),
+        url('../assets/fonts/BioRhyme-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'IRANSans';
+    src: url('../assets/fonts/IRANSans.eot');
+    src: url('../assets/fonts/IRANSans.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/IRANSans.woff2') format('woff2'),
+        url('../assets/fonts/IRANSans.woff') format('woff'),
+        url('../assets/fonts/IRANSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+$displaynone:none;
+$displaytable:table;
+$BioRhyme:BioRhyme;
+$iransns:IRANSans;
+body{
+    font-family: $iransns;
+}
+.none{
+    display: $displaynone;
+}
+.block{
+    display: $displaytable;
+}
+.font-biorhyme{
+    font-family: $BioRhyme;
+}
+.font-iransans{
+    font-family: $iransns;
+}
+.navbar-expand-lg .navbar-nav {
+    flex-direction: row;
+    direction: rtl;
+    padding: 0;
+}
+li.nav-item {
+    padding: 1rem;
+}
+.form-group.myform input{
+    font-family: $BioRhyme;
+    font-size: .8rem;
+}
+.example-thumb {
+    font-size: 0.9em;
+    text-align: center;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+.horizontal-slider .example-track {
+    top: 20px;
+    height: 10px;
+}
+.example-track.example-track-2 {
+    background: rgb(0, 255, 0);
+}
+.example-track.example-track-1 {
+    background: rgb(255, 0, 0);
+}
+.horizontal-slider .example-thumb {
+    top: 1px;
+    width: 50px;
+    height: 48px;
+    line-height: 48px;
+}
+.rc-checkbox {
+    white-space: nowrap;
+    cursor: pointer;
+    outline: none;
+    display: inline-block;
+    position: relative;
+    line-height: 1;
+    vertical-align: middle;
+}
+.rc-checkbox-input {
+    position: absolute;
+    left: 0;
+    z-index: 9999;
+    cursor: pointer;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+.rc-checkbox-checked .rc-checkbox-inner {
+    border-color: #3dbcf6;
+    background-color: #3dbcf6;
+}
+.rc-checkbox-inner {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    border-color: #d9d9d9;
+    background-color: #ffffff;
+    transition: border-color 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), background-color 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.rc-checkbox-checked .rc-checkbox-inner:after {
+    transform: rotate(45deg);
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    display: table;
+    width: 5px;
+    height: 8px;
+    border: 2px solid #ffffff;
+    border-top: 0;
+    border-left: 0;
+    content: ' ';
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    animation-duration: 0.3s;
+    animation-name: amCheckboxOut;
+}
+.my-textArea textarea {
+    width: 80%;
+    height: 150px !important;
+}
